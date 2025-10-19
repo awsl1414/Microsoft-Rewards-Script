@@ -32,7 +32,7 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}  # PR 时仅构建，不推送
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/ms-rewards-script:v2
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/microsoft-rewards-script:v2
           platforms: linux/amd64,linux/arm64  # ARM64 支持
           provenance: true
           sbom: true  # 生成 SBOM
